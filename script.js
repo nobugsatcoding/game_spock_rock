@@ -1,3 +1,4 @@
+import { startConfetti, stopConfetti, removeConfetti } from './confetti.js'
 
 const playerScoreEl = document.getElementById('playerScore');
 const playerChoiceEl = document.getElementById('playerChoice');
@@ -51,6 +52,8 @@ function resetAll() {
   resultText.textContent = '';
   resetSelected();
 }
+
+window.resetAll = resetAll;
 
 
 // Random computer choice
@@ -153,6 +156,8 @@ function select(playerChoice) {
       break;
   }
 }
+
+window.select = select;
 
 // On startup, set initial values
 resetAll();
